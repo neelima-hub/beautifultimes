@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="premiumGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880"/>
+      <stop offset="50%" stop-color="#E2D0A5"/>
+      <stop offset="100%" stop-color="#A5845E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Luxurious abstract lotus/shears logomark -->
+  <path d="M 50 20 C 60 50, 80 50, 90 20 C 80 35, 60 35, 50 20 Z" fill="url(#premiumGold)" />
+  <path d="M 50 80 C 60 50, 80 50, 90 80 C 80 65, 60 65, 50 80 Z" fill="url(#premiumGold)" />
+  <circle cx="70" cy="50" r="4" fill="url(#premiumGold)"/>
+  <path d="M 70 10 L 70 90" stroke="url(#premiumGold)" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 30 50 L 110 50" stroke="url(#premiumGold)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Elegant Typography -->
+  <text x="125" y="60" font-family="'Playfair Display', Didot, serif" font-size="38" font-weight="500" fill="#2C2C2C" letter-spacing="1">Beautiful times</text>
+  <text x="127" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8B8B8B" letter-spacing="6">LUXURY SALON</text>
+</svg>
