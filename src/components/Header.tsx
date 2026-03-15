@@ -78,20 +78,29 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Nav */}
-        <div
+        {/* Mobile Nav Overlay Background */}
+        <div 
           className={cn(
-            "fixed inset-0 bg-cream/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden",
+            "fixed inset-0 bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-300 md:hidden",
             mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
           )}
+          onClick={() => setMobileMenuOpen(false)}
+        />
+
+        {/* Mobile Nav Drawer */}
+        <div
+          className={cn(
+            "fixed top-0 right-0 h-full w-[80%] max-w-sm bg-cream z-40 flex flex-col px-8 pt-32 pb-8 shadow-2xl transition-transform duration-300 ease-in-out md:hidden overflow-y-auto border-l border-accent-gold/10",
+            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          )}
         >
-          <nav className="flex flex-col items-center gap-8">
+          <nav className="flex flex-col gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl font-serif text-text-dark hover:text-accent-gold transition-colors"
+                className="text-2xl font-serif text-text-dark hover:text-accent-gold transition-colors border-b border-gray-200/50 pb-4"
               >
                 {link.name}
               </Link>
@@ -101,12 +110,23 @@ export function Header() {
                 setMobileMenuOpen(false);
                 setIsBookingModalOpen(true);
               }}
-              className="mt-4 bg-accent-gold text-white px-8 py-3 rounded-sm hover:bg-rose-gold transition-colors font-medium text-lg flex items-center gap-2"
+              className="mt-6 bg-accent-gold text-white px-8 py-4 rounded-sm hover:bg-rose-gold transition-colors font-medium text-lg flex items-center justify-center gap-2 w-full shadow-lg"
             >
               <Calendar className="w-5 h-5" />
               Book Now
             </button>
           </nav>
+
+          <div className="mt-auto pt-10 text-center">
+             <Image
+                src="/logo.svg"
+                alt="Beautiful times Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto mx-auto opacity-50 mb-4"
+              />
+              <p className="text-xs text-text-dark/50 uppercase tracking-widest">Luxury Salon</p>
+          </div>
         </div>
       </header>
 
