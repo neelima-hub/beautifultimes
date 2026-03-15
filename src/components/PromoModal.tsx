@@ -22,6 +22,12 @@ export function PromoModal() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleOpenPromo = () => setIsOpen(true);
+    window.addEventListener("openPromo", handleOpenPromo);
+    return () => window.removeEventListener("openPromo", handleOpenPromo);
+  }, []);
+
   const closeModal = () => {
     setIsOpen(false);
     sessionStorage.setItem("hasSeenPromo", "true");

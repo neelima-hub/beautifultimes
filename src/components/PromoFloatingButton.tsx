@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Gift } from "lucide-react";
-import { BookingModal } from "./BookingModal";
 
 export function PromoFloatingButton() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -27,7 +25,7 @@ export function PromoFloatingButton() {
   return (
     <>
       <button
-        onClick={() => setIsBookingOpen(true)}
+        onClick={() => window.dispatchEvent(new Event("openPromo"))}
         className="fixed bottom-6 left-6 z-50 bg-accent-gold text-white p-3 md:px-5 md:py-3 rounded-full shadow-lg hover:bg-rose-gold transition-all duration-300 flex items-center justify-center gap-2 group hover:scale-105 active:scale-95"
         aria-label="Claim 10% Off"
       >
@@ -36,11 +34,6 @@ export function PromoFloatingButton() {
           10% Off First Visit
         </span>
       </button>
-
-      <BookingModal 
-        isOpen={isBookingOpen} 
-        onClose={() => setIsBookingOpen(false)} 
-      />
     </>
   );
 }

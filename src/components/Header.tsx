@@ -81,7 +81,7 @@ export function Header() {
         {/* Mobile Nav Overlay Background */}
         <div 
           className={cn(
-            "fixed inset-0 bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-300 md:hidden",
+            "fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden",
             mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
           )}
           onClick={() => setMobileMenuOpen(false)}
@@ -90,7 +90,7 @@ export function Header() {
         {/* Mobile Nav Drawer */}
         <div
           className={cn(
-            "fixed top-0 right-0 h-full w-[80%] max-w-sm bg-cream z-40 flex flex-col px-8 pt-32 pb-8 shadow-2xl transition-transform duration-300 ease-in-out md:hidden overflow-y-auto border-l border-accent-gold/10",
+            "fixed top-0 right-0 h-screen w-[80%] max-w-sm bg-cream z-50 flex flex-col px-8 pt-24 pb-8 shadow-2xl transition-transform duration-300 ease-in-out md:hidden border-l border-accent-gold/10",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -100,7 +100,7 @@ export function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl font-serif text-text-dark hover:text-accent-gold transition-colors border-b border-gray-200/50 pb-4"
+                className="block w-full text-2xl font-serif text-gray-900 hover:text-accent-gold transition-colors border-b border-gray-200/50 pb-4"
               >
                 {link.name}
               </Link>
