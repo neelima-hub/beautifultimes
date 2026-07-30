@@ -116,7 +116,7 @@ export function BookingModal({ isOpen, onClose, preselectedService }: BookingMod
                   value={formData.phone}
                   onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                   className="w-full border border-gray-200 bg-white px-4 py-2 rounded-sm focus:outline-none focus:border-accent-gold transition-colors text-text-dark" 
-                  placeholder="+91 98765 XXXXX" 
+                  placeholder="+91 87350 XXXXX" 
                 />
               </div>
               <div>

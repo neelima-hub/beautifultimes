@@ -39,15 +39,15 @@ export function Footer() {
             <ul className="flex flex-col gap-4 font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-accent-gold shrink-0" />
-                <span>S.G. Highway, Ahmedabad, Gujarat, India</span>
+                <span>GandhiNagar, Gujarat, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent-gold shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+918735088619" className="hover:text-accent-gold transition-colors">+91 87350 88619</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent-gold shrink-0" />
-                <span>hello@beautifultimes.ae</span>
+                <a href="mailto:hello@beautifultimes.in" className="hover:text-accent-gold transition-colors">hello@beautifultimes.in</a>
               </li>
             </ul>
           </div>
